@@ -1,0 +1,950 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel"
+  dslVersion="1.0.0.0"
+  Id="d3764e62-bafb-4825-8775-ccae086e2145"
+  name="DesempenoModel" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
+      <profileInstance
+        Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791"
+        name="StandardProfileL2" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="29349502-908c-4fda-9054-c48619c59ed0">
+      <profileInstance
+        Id="532ea607-fb19-44b8-8502-3351b05452be"
+        name="StandardProfileL3" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <actor
+        Id="46c32f32-9d16-4916-b718-51da99a57211"
+        name="Autoevaluado"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="7a7b923f-51ac-4ab0-9930-9cdd97ace25d"
+            isDerived="false"
+            sourceEndRoleName="Autoevaluado"
+            targetEndRoleName="Autenticacion mediante AD"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="e824af78-dec1-415d-bbcf-de97d1140588"
+              LastKnownName="Autenticacion mediante AD"
+              LastKnownLocation="DesempenoModel.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8cb6cef6-87ba-4a0e-b57d-2305eed8974b"
+                  name="Autoevaluado"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9d83f1a0-321b-4bf0-9200-e75fff617e86"
+                  name="Autenticacion mediante AD"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="549bd219-cbb0-48b5-98e9-e1032d8e7de1"
+        name="Supervisor"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="d2f2ff6c-d7e5-46c9-81ac-20a5b22c8689"
+            isDerived="false"
+            sourceEndRoleName="Supervisor"
+            targetEndRoleName="Autenticacion mediante AD"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="e824af78-dec1-415d-bbcf-de97d1140588"
+              LastKnownName="Autenticacion mediante AD"
+              LastKnownLocation="DesempenoModel.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d78dcde8-cad5-4d30-8cf3-f18e6e5ff075"
+                  name="Supervisor"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="54b35f0b-6a2c-4467-9d06-7f20c5c6b308"
+                  name="Autenticacion mediante AD"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="7f646557-fb12-418c-8b7d-ecd220955e32"
+        name="Administrador"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="9ff1bb99-4d26-4483-9c1d-a3cbb1d3b6a3"
+            isDerived="false"
+            sourceEndRoleName="Administrador"
+            targetEndRoleName="Autenticacion por Form"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="2b36b3df-9ac1-4d7c-9e0c-96223e05bddb"
+              LastKnownName="Autenticacion por Form"
+              LastKnownLocation="DesempenoModel.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="dcfd91a2-ee90-499e-b94a-93e739e9ee2b"
+                  name="Administrador"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9037c00c-985f-40f6-a30e-a9123e5ea7e9"
+                  name="Autenticacion por Form"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="e824af78-dec1-415d-bbcf-de97d1140588"
+        name="Autenticacion mediante AD"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="9a1bae62-b443-408e-8700-a78f9c0bb673"
+            isDerived="false"
+            sourceEndRoleName="Autenticacion mediante AD"
+            targetEndRoleName="Obtener Datos Empleado"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="40f309ae-51e8-46e1-b02a-eaba28bc5375"
+              LastKnownName="Obtener Datos Empleado"
+              LastKnownLocation="DesempenoModel.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="800fa930-e31c-4d47-8353-319116c8064c"
+                  name="Autenticacion mediante AD"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b561c060-6999-421e-9090-32fff511e89b"
+                  name="Obtener Datos Empleado"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="40f309ae-51e8-46e1-b02a-eaba28bc5375"
+        name="Obtener Datos Empleado"
+        isAbstract="false"
+        isLeaf="false">
+        <suppliersInternal>
+          <dependency
+            Id="dd1ffa10-dac8-45b8-896b-c61231d0a7af">
+            <useCaseMoniker
+              Id="2ac48475-2a88-40ec-980f-a5bae7e104e1"
+              LastKnownName="Obtener Listado De Supervisados"
+              LastKnownLocation="DesempenoModel.uml" />
+          </dependency>
+          <dependency
+            Id="ca0b0fef-18a6-4b85-84f6-6b1e6080e8f3">
+            <useCaseMoniker
+              Id="f43e7944-ceaa-4be4-912d-4d48dc586813"
+              LastKnownName="Obtener Evaluacion"
+              LastKnownLocation="DesempenoModel.uml" />
+          </dependency>
+        </suppliersInternal>
+        <targetEnds>
+          <association
+            Id="1796b61c-a564-451b-80d2-58d500efcae4"
+            isDerived="false"
+            sourceEndRoleName="Obtener Datos Empleado"
+            targetEndRoleName="Cargar responsabilidades"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="cb56ecfd-fa61-4d58-9b07-973c0543937a"
+              LastKnownName="Cargar responsabilidades"
+              LastKnownLocation="DesempenoModel.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2ef5e6ee-8b0b-4f4e-93aa-35df24e6b370"
+                  name="Obtener Datos Empleado"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="19b93a29-1527-4012-b310-821abe8b1727"
+                  name="Cargar responsabilidades"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="f43e7944-ceaa-4be4-912d-4d48dc586813"
+        name="Obtener Evaluacion"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="cb56ecfd-fa61-4d58-9b07-973c0543937a"
+        name="Cargar responsabilidades"
+        isAbstract="false"
+        isLeaf="false">
+        <suppliersInternal>
+          <dependency
+            Id="ec81e4f7-0914-4c6a-bde2-4cd363e2b522">
+            <useCaseMoniker
+              Id="4f1b3b65-5f4a-4be1-a30b-f1f39773252e"
+              LastKnownName="Verificar Estado Evaluación"
+              LastKnownLocation="DesempenoModel.uml" />
+          </dependency>
+          <dependency
+            Id="eed1bebe-2d5e-4d74-a9eb-2143feea3424">
+            <useCaseMoniker
+              Id="2f9dc65b-29dc-426e-8afd-f635cc124b93"
+              LastKnownName="Guardar Respuesta Empleado"
+              LastKnownLocation="DesempenoModel.uml" />
+          </dependency>
+        </suppliersInternal>
+        <targetEnds>
+          <association
+            Id="a28e3cf0-b55d-4697-b4d5-b12eb3a9a064"
+            isDerived="false"
+            sourceEndRoleName="Cargar responsabilidades"
+            targetEndRoleName="Cargar Oportunidad "
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="ea53e89e-79e2-485f-b7d3-08b374ae7dcc"
+              LastKnownName="Cargar Oportunidad "
+              LastKnownLocation="DesempenoModel.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ca524a0e-b799-4d10-bf3e-12737e72b2d6"
+                  name="Cargar responsabilidades"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="dbe10bca-c4e3-4213-a4d2-78eaab563d65"
+                  name="Cargar Oportunidad "
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="4f1b3b65-5f4a-4be1-a30b-f1f39773252e"
+        name="Verificar Estado Evaluación"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="b3a6904f-621f-4f62-90a2-38aa2b79f16a"
+        name="Cargar Competencias"
+        isAbstract="false"
+        isLeaf="false">
+        <suppliersInternal>
+          <dependency
+            Id="aefa2ce0-1e72-45d0-880e-8f41d4785114">
+            <useCaseMoniker
+              Id="4f1b3b65-5f4a-4be1-a30b-f1f39773252e"
+              LastKnownName="Verificar Estado Evaluación"
+              LastKnownLocation="DesempenoModel.uml" />
+          </dependency>
+          <dependency
+            Id="611b54bd-fdcf-4d20-aa8f-c65ba5fdeeb0">
+            <useCaseMoniker
+              Id="2f9dc65b-29dc-426e-8afd-f635cc124b93"
+              LastKnownName="Guardar Respuesta Empleado"
+              LastKnownLocation="DesempenoModel.uml" />
+          </dependency>
+          <dependency
+            Id="c08b4b4c-e2ce-4117-8939-1edee55196bd">
+            <useCaseMoniker
+              Id="2bbeb99d-5c74-4858-99be-13a714a6f90e"
+              LastKnownName="Guardar Respuesta Supervisor"
+              LastKnownLocation="DesempenoModel.uml" />
+          </dependency>
+        </suppliersInternal>
+        <targetEnds>
+          <association
+            Id="4d473539-578b-4d8d-a7ed-de8681395776"
+            isDerived="false"
+            sourceEndRoleName="Cargar Competencias"
+            targetEndRoleName="Cargar Desempeño Glogal"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="51a3ac59-51d4-4c3a-a5dc-e7e70ad59614"
+              LastKnownName="Cargar Desempeño Glogal"
+              LastKnownLocation="DesempenoModel.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="34c35d7a-2e23-4c31-9acb-c640352fbbc5"
+                  name="Cargar Competencias"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e4860565-5d98-4918-9124-fcbf060fbd7a"
+                  name="Cargar Desempeño Glogal"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="ea53e89e-79e2-485f-b7d3-08b374ae7dcc"
+        name="Cargar Oportunidad "
+        isAbstract="false"
+        isLeaf="false">
+        <suppliersInternal>
+          <dependency
+            Id="4856a88f-dcf3-445e-b398-fa0e1c0012df">
+            <useCaseMoniker
+              Id="4f1b3b65-5f4a-4be1-a30b-f1f39773252e"
+              LastKnownName="Verificar Estado Evaluación"
+              LastKnownLocation="DesempenoModel.uml" />
+          </dependency>
+          <dependency
+            Id="2318185d-a768-476d-bc97-fb428c1f7a8d">
+            <useCaseMoniker
+              Id="2f9dc65b-29dc-426e-8afd-f635cc124b93"
+              LastKnownName="Guardar Respuesta Empleado"
+              LastKnownLocation="DesempenoModel.uml" />
+          </dependency>
+        </suppliersInternal>
+        <targetEnds>
+          <association
+            Id="3165cb97-2146-42b3-ae0f-d41bbebd8055"
+            isDerived="false"
+            sourceEndRoleName="Cargar Oportunidad "
+            targetEndRoleName="Cargar Competencias"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="b3a6904f-621f-4f62-90a2-38aa2b79f16a"
+              LastKnownName="Cargar Competencias"
+              LastKnownLocation="DesempenoModel.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5bd7b67f-6b3a-4c43-afbd-c5bd9d035f9e"
+                  name="Cargar Oportunidad "
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="3edef31d-58dd-4c90-b9f1-57cec9af8baa"
+                  name="Cargar Competencias"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="51a3ac59-51d4-4c3a-a5dc-e7e70ad59614"
+        name="Cargar Desempeño Glogal"
+        isAbstract="false"
+        isLeaf="false">
+        <suppliersInternal>
+          <dependency
+            Id="b1c90cc0-910e-44bd-af9b-53df14c037d8">
+            <useCaseMoniker
+              Id="4f1b3b65-5f4a-4be1-a30b-f1f39773252e"
+              LastKnownName="Verificar Estado Evaluación"
+              LastKnownLocation="DesempenoModel.uml" />
+          </dependency>
+          <dependency
+            Id="bb5f9fb6-2e55-4307-afef-0b4d07546f2e">
+            <useCaseMoniker
+              Id="2f9dc65b-29dc-426e-8afd-f635cc124b93"
+              LastKnownName="Guardar Respuesta Empleado"
+              LastKnownLocation="DesempenoModel.uml" />
+          </dependency>
+          <dependency
+            Id="a4beef5e-c4a9-4af5-8293-b330baec298a">
+            <useCaseMoniker
+              Id="2bbeb99d-5c74-4858-99be-13a714a6f90e"
+              LastKnownName="Guardar Respuesta Supervisor"
+              LastKnownLocation="DesempenoModel.uml" />
+          </dependency>
+          <dependency
+            Id="8bf80922-cb1e-4f6f-967f-3cae4dfdbb9c">
+            <useCaseMoniker
+              Id="5f6f2915-2813-40e8-ac6b-9927081b2371"
+              LastKnownName="Finalizar Evaluación Autoevaluado"
+              LastKnownLocation="DesempenoModel.uml" />
+          </dependency>
+          <dependency
+            Id="4792ee32-0b2b-4335-8b0e-8da111a132ea">
+            <useCaseMoniker
+              Id="56c98c10-129d-4b5d-b400-7ab1c620b0df"
+              LastKnownName="Finalizar Evaluación Supervisor"
+              LastKnownLocation="DesempenoModel.uml" />
+          </dependency>
+        </suppliersInternal>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="2f9dc65b-29dc-426e-8afd-f635cc124b93"
+        name="Guardar Respuesta Empleado"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="2bbeb99d-5c74-4858-99be-13a714a6f90e"
+        name="Guardar Respuesta Supervisor"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="5f6f2915-2813-40e8-ac6b-9927081b2371"
+        name="Finalizar Evaluación Autoevaluado"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="56c98c10-129d-4b5d-b400-7ab1c620b0df"
+        name="Finalizar Evaluación Supervisor"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="2ac48475-2a88-40ec-980f-a5bae7e104e1"
+        name="Obtener Listado De Supervisados"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="2b36b3df-9ac1-4d7c-9e0c-96223e05bddb"
+        name="Autenticacion por Form"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="ece45132-926c-41cd-87d3-487e43daf7c3"
+            isDerived="false"
+            sourceEndRoleName="Autenticacion por Form"
+            targetEndRoleName="Listar Empleados"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="459fe240-dac7-4832-ae11-1cac8a85f03d"
+              LastKnownName="Listar Empleados"
+              LastKnownLocation="DesempenoModel.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="3f50a92c-b104-478b-99e5-5cb5b1820298"
+                  name="Autenticacion por Form"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="586bf44a-83fe-46c4-a869-bb0cda68f5e3"
+                  name="Listar Empleados"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="642f2faa-d151-46d2-8145-54f5c0dac9fd"
+        name="Búsqueda de Empleados"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="459fe240-dac7-4832-ae11-1cac8a85f03d"
+        name="Listar Empleados"
+        isAbstract="false"
+        isLeaf="false">
+        <suppliersInternal>
+          <dependency
+            Id="ad466cef-12e3-4b8c-8976-20a350117dde">
+            <useCaseMoniker
+              Id="642f2faa-d151-46d2-8145-54f5c0dac9fd"
+              LastKnownName="Búsqueda de Empleados"
+              LastKnownLocation="DesempenoModel.uml" />
+          </dependency>
+        </suppliersInternal>
+        <targetEnds>
+          <association
+            Id="d4cb799b-d1b8-4abe-b934-5998c49825c9"
+            isDerived="false"
+            sourceEndRoleName="Listar Empleados"
+            targetEndRoleName="Agregar Empleado"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="72c6c2a8-3ba8-4ab9-b4bb-d7f70abc116a"
+              LastKnownName="Agregar Empleado"
+              LastKnownLocation="DesempenoModel.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6e1193e0-e8e2-44c8-9037-2019a35f708b"
+                  name="Listar Empleados"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8355186b-7f15-4caa-940f-71c914f7a2e3"
+                  name="Agregar Empleado"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="a82f24fd-b0a4-4ac4-b447-716d1b27b5a8"
+            isDerived="false"
+            sourceEndRoleName="Listar Empleados"
+            targetEndRoleName="Modificar Empleados"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="0f1ce5c3-a033-401c-a60a-c9915552fb35"
+              LastKnownName="Modificar Empleados"
+              LastKnownLocation="DesempenoModel.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="bd0bbce2-7abe-4d8b-b247-d43aa097cabd"
+                  name="Listar Empleados"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a6e68ff1-ff6d-4a36-be5a-c4ca5c0e0a5f"
+                  name="Modificar Empleados"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="3aedb877-1b93-4358-a44a-9d60ddbb7300"
+            isDerived="false"
+            sourceEndRoleName="Listar Empleados"
+            targetEndRoleName="Volver al Estado Inicial Evaluacion"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="b7959c82-9c3d-47d2-9c68-a92f0b1f6177"
+              LastKnownName="Volver al Estado Inicial Evaluacion"
+              LastKnownLocation="DesempenoModel.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5fca4b72-fbfe-4ef6-af5e-1385da39c2ec"
+                  name="Listar Empleados"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="0c26ae78-0bbf-406f-8b42-4caf56b093a3"
+                  name="Volver al Estado Inicial Evaluacion"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="abf30ebb-95a3-450e-83a4-f6d1f9f19683"
+            isDerived="false"
+            sourceEndRoleName="Listar Empleados"
+            targetEndRoleName="Borrar Evaluacion"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="7ab553bb-1fb0-4fdd-ab29-136b927e8216"
+              LastKnownName="Borrar Evaluacion"
+              LastKnownLocation="DesempenoModel.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="1dfdea2d-9c05-4079-a1eb-9c44d051e628"
+                  name="Listar Empleados"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ffd3bee9-4d2a-448f-bdfa-85cced99e9c5"
+                  name="Borrar Evaluacion"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="87e1cc34-0619-4501-9bf2-f537ac9af0d8"
+            isDerived="false"
+            sourceEndRoleName="Listar Empleados"
+            targetEndRoleName="Modificacion de períodos de Evaluacion"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="4e3c147c-0e02-4453-8904-50b8590e0600"
+              LastKnownName="Modificacion de períodos de Evaluacion"
+              LastKnownLocation="DesempenoModel.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ac49428a-e24f-4f71-99b3-b6afa3f2ecd7"
+                  name="Listar Empleados"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="bb359bcd-84fc-4052-8135-32b20c187654"
+                  name="Modificacion de períodos de Evaluacion"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="896df845-e969-4066-bc12-2558e1155987"
+            isDerived="false"
+            sourceEndRoleName="Listar Empleados"
+            targetEndRoleName="Convertir listado a CSV "
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="2adaaa55-98e4-47a8-9220-49de7c4189a4"
+              LastKnownName="Convertir listado a CSV "
+              LastKnownLocation="DesempenoModel.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="cfcba1ed-9ac0-4e8a-9866-75937bca8646"
+                  name="Listar Empleados"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8247bd4f-9be8-42b2-9e64-3337e266bd5d"
+                  name="Convertir listado a CSV "
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="72c6c2a8-3ba8-4ab9-b4bb-d7f70abc116a"
+        name="Agregar Empleado"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="0f1ce5c3-a033-401c-a60a-c9915552fb35"
+        name="Modificar Empleados"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="7ab553bb-1fb0-4fdd-ab29-136b927e8216"
+        name="Borrar Evaluacion"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="b7959c82-9c3d-47d2-9c68-a92f0b1f6177"
+        name="Volver al Estado Inicial Evaluacion"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="4e3c147c-0e02-4453-8904-50b8590e0600"
+        name="Modificacion de períodos de Evaluacion"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="2adaaa55-98e4-47a8-9220-49de7c4189a4"
+        name="Convertir listado a CSV "
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+  </packagedElements>
+  <primitiveType
+    Id="220a3521-e091-4221-bae9-3ef9018e845c"
+    name="Integer"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+    name="Boolean"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+    name="String"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="3ab42e7d-4969-445a-b209-471f5cb8209c"
+    name="UnlimitedNatural"
+    isAbstract="false"
+    isLeaf="false" />
+</modelStoreModel>

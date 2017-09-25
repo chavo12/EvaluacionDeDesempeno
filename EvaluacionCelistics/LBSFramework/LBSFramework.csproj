@@ -1,0 +1,454 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D02486AF-D519-45B8-B637-9FEB387011A6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LBSFramework</RootNamespace>
+    <AssemblyName>LBSFramework</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <ExpressionBlendVersion>5.0.40218.0</ExpressionBlendVersion>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\..\NombrePropio\Dev\Soluciones\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="GenCode128, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dlls\GenCode128.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="PresentationUI, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="ReachFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Printing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="UIAutomationTypes" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="Xceed.Wpf.AvalonDock, Version=2.0.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dlls\Xceed.Wpf.AvalonDock.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.Aero, Version=2.0.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dlls\Xceed.Wpf.AvalonDock.Themes.Aero.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.Metro, Version=2.0.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dlls\Xceed.Wpf.AvalonDock.Themes.Metro.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.VS2010, Version=2.0.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dlls\Xceed.Wpf.AvalonDock.Themes.VS2010.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.DataGrid, Version=2.0.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dlls\Xceed.Wpf.DataGrid.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.Toolkit, Version=2.0.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dlls\Xceed.Wpf.Toolkit.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConexionBD\AbstractMapper.cs" />
+    <Compile Include="ConexionBD\Ambiente.cs" />
+    <Compile Include="ConexionBD\LBSSqlConnection.cs" />
+    <Compile Include="ControlesForm\ucBtnAceptar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlesForm\ucBtnAceptar.Designer.cs">
+      <DependentUpon>ucBtnAceptar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlesForm\ucBtnCancelar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlesForm\ucBtnCancelar.Designer.cs">
+      <DependentUpon>ucBtnCancelar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlesForm\ucBtnSalir.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlesForm\ucBtnSalir.Designer.cs">
+      <DependentUpon>ucBtnSalir.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlesForm\ucComboBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlesForm\ucComboBox.Designer.cs">
+      <DependentUpon>ucComboBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlesForm\ucGrilla.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlesForm\ucGrilla.Designer.cs">
+      <DependentUpon>ucGrilla.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlesForm\ucLabel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlesForm\ucLabel.Designer.cs">
+      <DependentUpon>ucLabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlesForm\ucTextBoxMail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlesForm\ucTextBoxMail.Designer.cs">
+      <DependentUpon>ucTextBoxMail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlesForm\ucTextBoxNumeroDecimal.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlesForm\ucTextBoxNumeroDecimal.Designer.cs">
+      <DependentUpon>ucTextBoxNumeroDecimal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlesForm\ucTextBoxNumeroEntero.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlesForm\ucTextBoxNumeroEntero.Designer.cs">
+      <DependentUpon>ucTextBoxNumeroEntero.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlesForm\ucTextBoxNumeroFloat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlesForm\ucTextBoxNumeroFloat.Designer.cs">
+      <DependentUpon>ucTextBoxNumeroFloat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlesForm\ucTextBoxTelefono.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlesForm\ucTextBoxTelefono.Designer.cs">
+      <DependentUpon>ucTextBoxTelefono.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlesForm\ucTextBoxTextoLibre.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlesForm\ucTextBoxTextoLibre.Designer.cs">
+      <DependentUpon>ucTextBoxTextoLibre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlesWPF\BorrableRows.cs" />
+    <Compile Include="ControlesWPF\ImprimibleRows.cs" />
+    <Compile Include="ControlesWPF\DataTemplateImprimibleBase.cs" />
+    <Compile Include="ControlesWPF\SeleccionableRows.cs" />
+    <Compile Include="ControlesWPF\DataTemplateSeleccionableBase.cs" />
+    <Compile Include="ControlesWPF\DataBoundObject.cs" />
+    <Compile Include="ControlesWPF\DataTemplateBorrableBase.cs" />
+    <Compile Include="ControlesWPF\DataTemplateEditableBase.cs" />
+    <Compile Include="ControlesWPF\Diccionarios\Exclamation.xaml.cs">
+      <DependentUpon>Exclamation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ControlesWPF\EditableRows.cs" />
+    <Compile Include="ControlesWPF\ucBtnAgregar.xaml.cs">
+      <DependentUpon>ucBtnAgregar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ControlesWPF\ucBtnImprimir.xaml.cs">
+      <DependentUpon>ucBtnImprimir.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ControlesWPF\ucBtnBuscar.xaml.cs">
+      <DependentUpon>ucBtnBuscar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ControlesWPF\ucBtnAceptar.xaml.cs">
+      <DependentUpon>ucBtnAceptar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ControlesWPF\ucBtnActualizar.xaml.cs">
+      <DependentUpon>ucBtnActualizar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ControlesWPF\ucBtnCancelar.xaml.cs">
+      <DependentUpon>ucBtnCancelar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ControlesWPF\ucCodigoBarras128.xaml.cs">
+      <DependentUpon>ucCodigoBarras128.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ControlesWPF\ucCombo.xaml.cs">
+      <DependentUpon>ucCombo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ControlesWPF\ucGrilla.xaml.cs">
+      <DependentUpon>ucGrilla.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ControlesWPF\ucTextBoxeMail.xaml.cs">
+      <DependentUpon>ucTextBoxeMail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ControlesWPF\ucTextBoxFecha.xaml.cs">
+      <DependentUpon>ucTextBoxFecha.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ControlesWPF\ucTextBoxLibre.xaml.cs">
+      <DependentUpon>ucTextBoxLibre.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ControlesWPF\ucTextBoxNumeroDecimal.xaml.cs">
+      <DependentUpon>ucTextBoxNumeroDecimal.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ControlesWPF\ucTextBoxNumeroLong.xaml.cs">
+      <DependentUpon>ucTextBoxNumeroLong.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ControlesWPF\ucTextBoxNumeroEntero.xaml.cs">
+      <DependentUpon>ucTextBoxNumeroEntero.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ControlesWPF\ValidacionesTextBox.cs" />
+    <Compile Include="Entitys\Entity.cs" />
+    <Compile Include="Entitys\Items.cs" />
+    <Compile Include="Entitys\PK.cs" />
+    <Compile Include="Helppers\FuncionesGenerales.cs" />
+    <Compile Include="Helppers\FuncionesWPF.cs" />
+    <Compile Include="Helppers\ListaEnum.cs" />
+    <Compile Include="Helppers\Transacciones.cs" />
+    <Compile Include="Helppers\Validaciones.cs" />
+    <Compile Include="Impresion\ControlImpresora.cs" />
+    <Compile Include="Impresion\EMF.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ControlesForm\ucTextBoxFecha.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlesForm\ucTextBoxFecha.Designer.cs">
+      <DependentUpon>ucTextBoxFecha.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Resources\Cancelar2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ControlesForm\ucBtnAceptar.resx">
+      <DependentUpon>ucBtnAceptar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlesForm\ucBtnCancelar.resx">
+      <DependentUpon>ucBtnCancelar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlesForm\ucBtnSalir.resx">
+      <DependentUpon>ucBtnSalir.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlesForm\ucComboBox.resx">
+      <DependentUpon>ucComboBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlesForm\ucGrilla.resx">
+      <DependentUpon>ucGrilla.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlesForm\ucLabel.resx">
+      <DependentUpon>ucLabel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlesForm\ucTextBoxMail.resx">
+      <DependentUpon>ucTextBoxMail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlesForm\ucTextBoxNumeroDecimal.resx">
+      <DependentUpon>ucTextBoxNumeroDecimal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlesForm\ucTextBoxNumeroEntero.resx">
+      <DependentUpon>ucTextBoxNumeroEntero.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlesForm\ucTextBoxNumeroFloat.resx">
+      <DependentUpon>ucTextBoxNumeroFloat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlesForm\ucTextBoxTelefono.resx">
+      <DependentUpon>ucTextBoxTelefono.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlesForm\ucTextBoxTextoLibre.resx">
+      <DependentUpon>ucTextBoxTextoLibre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlesForm\ucTextBoxFecha.resx">
+      <DependentUpon>ucTextBoxFecha.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Aceptar.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close24.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close16.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Borrar16.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Borrar16Disable.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EditarDisable16.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EditarEnable16.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Actualizar.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Agregar.png" />
+    <Content Include="Resources\Buscar.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Decimal.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Entero.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\E_mail.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\ImprimibleDisable.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\ImprimibleEnable.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\NoImprimible.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\NoSeleccionable.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\SeleccionDisable.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\SeleccionEnable.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="ControlesWPF\Diccionarios\EstiloErrorValidate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ControlesWPF\Diccionarios\Exclamation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ControlesWPF\ucBtnAgregar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ControlesWPF\ucBtnImprimir.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ControlesWPF\ucBtnBuscar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ControlesWPF\ucBtnAceptar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ControlesWPF\ucBtnActualizar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ControlesWPF\ucBtnCancelar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ControlesWPF\ucCodigoBarras128.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ControlesWPF\ucCombo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ControlesWPF\ucGrilla.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ControlesWPF\ucTextBoxeMail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ControlesWPF\ucTextBoxFecha.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ControlesWPF\ucTextBoxLibre.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ControlesWPF\ucTextBoxNumeroDecimal.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ControlesWPF\ucTextBoxNumeroLong.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ControlesWPF\ucTextBoxNumeroEntero.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

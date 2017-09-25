@@ -1,0 +1,45 @@
+﻿<ResourceDictionary x:Class="LBSFramework.ControlesWPF.Diccionarios.EstiloErrorValidate"
+                    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:src="clr-namespace:LBSFramework.ControlesWPF.Diccionarios"
+                    xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit">
+
+
+
+    <ControlTemplate x:Key="validationTemplate">
+        <DockPanel>
+            <Border Name="validationBorder"
+                    BorderBrush="Red"
+                    BorderThickness="2"
+                    CornerRadius="3"
+                    Padding="1">
+                <Border.Resources>
+                    <Storyboard x:Key="_blink">
+                        <ColorAnimationUsingKeyFrames AutoReverse="True"
+                                                      BeginTime="00:00:00"
+                                                      RepeatBehavior="Forever"
+                                                      Storyboard.TargetName="validationBorder"
+                                                      Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)">
+                            <SplineColorKeyFrame KeyTime="00:00:00.5" Value="#00FF0000" />
+                        </ColorAnimationUsingKeyFrames>
+                    </Storyboard>
+                </Border.Resources>
+                <Border.Triggers>
+                    <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+                        <BeginStoryboard Storyboard="{StaticResource _blink}" />
+                    </EventTrigger>
+                </Border.Triggers>
+                <AdornedElementPlaceholder />
+            </Border>
+            <src:Exclamation Width="20" Height="20" />
+        </DockPanel>
+    </ControlTemplate>
+    <Style x:Key="highlightValidationError">
+        <Style.Triggers>
+            <Trigger Property="Validation.HasError" Value="True">
+                <Setter Property="TextBox.Background" Value="Pink" />
+                <Setter Property="TextBox.ToolTip" Value="{Binding RelativeSource={x:Static RelativeSource.Self}, Path=(Validation.Errors)[0].ErrorContent}" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+</ResourceDictionary>

@@ -1,0 +1,47 @@
+﻿<UserControl x:Class="LBSFramework.ControlesWPF.ucTextBoxNumeroLong"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:src="clr-namespace:LBSFramework.ControlesWPF"
+             xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+             Name="ucText"
+             IsEnabledChanged="ucText_IsEnabledChanged"
+             KeyboardNavigation.TabNavigation="Local"
+             mc:Ignorable="d">
+
+
+
+    <Grid>
+        <xctk:WatermarkTextBox Name="txtText"
+                               Width="{Binding ActualWidth,
+                                               ElementName=b}"
+                               VerticalAlignment="Center"
+                               FontSize="12"
+                               KeyDown="txtText_KeyDown"
+                               TabIndex="0"
+                               TextChanged="txtText_TextChanged">
+            <xctk:WatermarkTextBox.Watermark>
+                <StackPanel Name="pnimg"
+                            Margin="0,0,0,0"
+                            Orientation="Horizontal">
+                    <Image Name="img"
+                           Width="16"
+                           Height="16"
+                           Source="pack://siteoforigin:,,,/Resources/Entero.png" />
+                    <TextBlock Name="_WaterText"
+                               Margin="4,0,0,0"
+                               Text="Ingrese un Valor Numerico" />
+                </StackPanel>
+            </xctk:WatermarkTextBox.Watermark>
+
+
+        </xctk:WatermarkTextBox>
+        <StackPanel Name="pnLabel"
+                    Grid.ColumnSpan="2"
+                    Visibility="Collapsed">
+            <Label Name="lblTexto" />
+        </StackPanel>
+
+    </Grid>
+</UserControl>

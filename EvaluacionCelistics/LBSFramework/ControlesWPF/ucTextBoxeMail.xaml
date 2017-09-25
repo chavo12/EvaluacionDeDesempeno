@@ -1,0 +1,45 @@
+﻿<UserControl x:Class="LBSFramework.ControlesWPF.ucTextBoxeMail"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:src="clr-namespace:LBSFramework.ControlesWPF"
+             xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+             KeyboardNavigation.TabNavigation="Local"
+             mc:Ignorable="d">
+
+
+    <Grid>
+        <xctk:WatermarkTextBox Name="txtText"
+                               Grid.Column="1"
+                               Width="{Binding ActualWidth,
+                                               ElementName=b}"
+                               Height="{Binding ActualHeight,
+                                                ElementName=d}"
+                               VerticalAlignment="Center"
+                               KeyDown="txtText_KeyDown"
+                               TabIndex="0"
+                               TextChanged="txtText_TextChanged">
+
+            <xctk:WatermarkTextBox.Watermark>
+                <StackPanel Orientation="Horizontal">
+                    <Image Name="img"
+                           Width="16"
+                           Height="16"
+                           Source="pack://siteoforigin:,,,/Resources/E_Mail.png" />
+                    <TextBlock Name="_WaterText"
+                               Margin="4,0,0,0"
+                               Text="Ingrese un eMail" />
+                </StackPanel>
+            </xctk:WatermarkTextBox.Watermark>
+
+            <xctk:WatermarkTextBox.Text>
+                <Binding Path="SomeString" UpdateSourceTrigger="PropertyChanged">
+                    <Binding.ValidationRules>
+                        <src:eMailValidationRule />
+                    </Binding.ValidationRules>
+                </Binding>
+            </xctk:WatermarkTextBox.Text>
+        </xctk:WatermarkTextBox>
+    </Grid>
+</UserControl>

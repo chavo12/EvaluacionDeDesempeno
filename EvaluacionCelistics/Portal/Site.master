@@ -1,0 +1,137 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="Site" %>
+
+<!DOCTYPE html>
+
+<html lang="es">
+<head runat="server">
+    <meta http-equiv="X-UA-Compatible" content="IE=10" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EVALUACION ANUAL DE DESEMPEÑO</title>
+    <link href="Content/favicon.png" rel="shortcut icon" type="image/x-icon" />
+    <link rel="stylesheet" href="Content/Site.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="Content/bootstrap.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="Content/stylesheet-pure-css.css">
+    <link href="Content/jquery-ui.min.css" rel="stylesheet" />
+    <link href="Content/jquery-ui.structure.min.css" rel="stylesheet" />
+    <link href="Content/jquery-ui.theme.min.css" rel="stylesheet" />
+    <link href="Content/jquery.bootgrid.css" rel="stylesheet" />
+    <script type="text/javascript" src="Scripts/jquery-1.10.2.min.js"></script>
+    
+    <script type="text/javascript">
+        function resizeIframe(obj) {
+            obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+        }
+    </script>
+</head>
+<body>
+    <form runat="server">
+        <header class="encabezado">
+
+            <div class="row">
+                <div class="col-md-7">
+                    <img src="/Content/logo.png" class="img-responsive" alt="Celistics" style="width: 45%;">
+                </div>
+                <div class="col-md-5" style="margin-top: 35px;">
+                    <div class="col-md-12">
+                        <asp:LinkButton ID="lbtnLogout" OnClick="lbtnLogout_Click" CssClass="pull-right" runat="server">Log Out</asp:LinkButton>
+                        <asp:Literal runat="server" ID="litSesion"></asp:Literal>
+
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="row contenedor cuerpo">
+            <div class="col-md-2">
+
+                <nav class="navbar navbar-default sidebar" role="navigation">
+                    <div id="wrapper">
+
+                        <!-- Sidebar -->
+                        <div id="sidebar-wrapper">
+                            <% if (Session["ADMIN"] != null && !string.IsNullOrEmpty(Session["ADMIN"].ToString()))
+                                { %>
+                            <ul class="sidebar-nav">
+                                <li></li>
+                                <li><a href="homeadmin.aspx">
+                                    <asp:Literal ID="litHomeSupervisor" Text="Home" runat="server"></asp:Literal></a></li>
+                            </ul>
+                            <% }
+    else
+    { %>
+                            <ul class="sidebar-nav">
+                                <li></li>
+                                <li><a href="home.aspx">
+                                    <asp:Literal ID="litHome" runat="server"></asp:Literal></a></li>
+                                <li><a href="responsabilidades.aspx">
+                                    <asp:Literal ID="litResponsabilidades" runat="server"></asp:Literal></a></li>
+                                <li><a href="competencia.aspx">
+                                    <asp:Literal ID="litCompetencias" runat="server"></asp:Literal></a></li>
+                                <li><a href="oportunidades.aspx">
+                                    <asp:Literal ID="litOportunidades" runat="server"></asp:Literal></a></li>
+                                <li><a href="desempeno.aspx">
+                                    <asp:Literal ID="litDesempeño" runat="server"></asp:Literal></a></li>
+                            </ul>
+                            <%} %>
+                        </div>
+                        <!-- /#sidebar-wrapper -->
+
+                        <!-- Page Content -->
+                        <div class="container-fluid">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle" id="menu-toggle" data-toggle="collapse" data-target="#bs-sidebar-navbar-collapse-1">
+                                    <span class="sr-only">Menu</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /#page-content-wrapper -->
+
+                </nav>
+
+
+            </div>
+            <div class="col-md-10 contenedor" id="contenedor">
+                <div class="container">
+                    <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <img src="/Content/sure.png" class="img-responsive pull-right" alt="Celistics" style="width: 10%;">
+            <img src="/Content/movilway.png" class="img-responsive pull-right" alt="Celistics" style="width: 10%;">
+            <img src="/Content/celistics.png" class="img-responsive pull-right" alt="Celistics" style="width: 10%;">
+        </footer>
+        <%--  --%>
+    </form>
+    <script type="text/javascript">
+        $("#menu-toggle").click(function (e) {
+            e.preventDefault();
+            $(".container-fluid").toggleClass("toggled");
+        });
+    </script>
+    <script src="Scripts/jquery.js"></script>
+    <script src="Scripts/jquery-ui.min.js"></script>
+     <script src="Scripts/bootstrap.js"></script>
+    <script src="Scripts/chosen.jquery.min.js"></script>
+    <script src="Scripts/jquery.bootgrid.min.js"></script>
+    <script src="Scripts/jquery.bootgrid.fa.min.js"></script>
+    <script src="Scripts/trivia.js"></script>
+    <script src="Scripts/jspdf.min.js"></script>
+    <script src="Scripts/from_html.js"></script>
+        <script src="Scripts/moment.js"></script>
+    <script>
+        $("#menu-toggle").click(function (e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+        });
+    </script>
+</body>
+</html>
+
