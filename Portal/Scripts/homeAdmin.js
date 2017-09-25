@@ -210,7 +210,10 @@ function verificarEmpelado()
                      inicio: $('#inicio').val(),
                      inicioSuper: $('#inicioSuper').val(),
                      fin: $('#fin').val(),
-                     finSuper:$('#finSuper').val()
+                     finSuper: $('#finSuper').val(),
+                     clave: $('#hdClave').val(),
+                     resetClave: $('#hdResetClave').val(),
+                     fechaResetClave: $('#hdFechaResetClave').val()
                  },
                  success: function (ok) {
                      if (ok == "responsabilidad") {

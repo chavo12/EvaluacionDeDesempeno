@@ -62,6 +62,9 @@ public partial class empleado : System.Web.UI.Page
                         Literal4.Text = " value=\"" + eval.InicioSupervisor.ToShortDateString() + "\"";
                         Literal5.Text = " value=\"" + eval.FinSupervisor.Value.ToShortDateString() + "\"";
                         hdid.Value = emp.IdEmpleado.ToString();
+                        hdClave.Value = emp.clave;
+                        hdResetClave.Value = (emp.resetClave.HasValue) ? emp.resetClave.ToString() : null;
+                        hdFechaResetClave.Value = (emp.fechaResetClave.HasValue) ? emp.fechaResetClave.ToString() : null;
                         pnResponsabilidades.Visible = false;
                         pnOportunidades.Visible = false;
                     }

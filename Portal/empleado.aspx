@@ -18,7 +18,10 @@
                                             <label class="text-info">Nombre</label>
                                         <input type="text" id="nombre" class="form-control" placeholder="Nombre" <asp:Literal ID="litNombre" runat="server"></asp:Literal> /> 
                                         <asp:HiddenField ID="hdid" ClientIDMode="Static" Value="0" runat="server" />
-                                        <asp:HiddenField ID="hdidAdmin" ClientIDMode="Static" Value="0" runat="server" /> 
+                                        <asp:HiddenField ID="hdidAdmin" ClientIDMode="Static" Value="0" runat="server" />
+                                        <asp:HiddenField ID="hdClave" ClientIDMode="Static" Value="" runat="server" /> 
+                                        <asp:HiddenField ID="hdResetClave" ClientIDMode="Static" Value="" runat="server" /> 
+                                        <asp:HiddenField ID="hdFechaResetClave" ClientIDMode="Static" Value="" runat="server" /> 
                                     </div>
                                     <div class="col-md-4">
                                             <label class="text-info">Primer Apellido</label>

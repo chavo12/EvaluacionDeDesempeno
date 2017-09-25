@@ -51,7 +51,10 @@ public partial class AjaxGuardarEmpleado : System.Web.UI.Page
                 Nivel = Request.Params["nivel"],
                 fin  = fin,
                 inicioSuper= inicioSuper,
-                finSuper = finsSuper
+                finSuper = finsSuper,
+                clave = Request.Params["clave"],
+                resetClave = ((!string.IsNullOrEmpty(Request.Params["resetClave"]))?(Guid?)Guid.Parse(Request.Params["resetClave"]):null),
+                fechaResetClave = ((!string.IsNullOrEmpty(Request.Params["fechaResetClave"]))?(DateTime?) DateTime.Parse(Request.Params["fechaResetClave"]):null),
             };
             if (emp.IdEmpleado == 0)
             {
