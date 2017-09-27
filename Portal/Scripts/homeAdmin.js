@@ -468,5 +468,23 @@ function borrarEmpleado()
                      }
                  });
         return result;
-    }
+}
+
+function resetClave()
+{
+    $.ajax
+        ({
+            url: "AjaxResetClave.aspx",
+            type: "POST",
+            dataType: 'html',
+            async: false,
+            data:
+            {
+                empleadoid: $("#hdid").val()
+            },
+            success: function (ok) {
+                $("#msgCambioOk").show();
+            }
+        });
+}
 

@@ -263,6 +263,7 @@
                  <a href="homeadmin.aspx" class="btn btn-info pull-right" onclick="javascript:return verificarEmpelado();" role="button">Guardar</a>
                 <a href="/homeadmin.aspx" class="btn btn-info pull-right" role="button">Cancelar</a>
                 <a href="/homeadmin.aspx" class="btn btn-info pull-right" onclick="javascript:if(confirm('¿Está seguro que desea elminar el empleado?')) return borrarEmpleado(); else return false;" role="button">Eliminar Empleado</a>
+                    <a href="/homeadmin.aspx" class="btn btn-info pull-right" onclick="javascript:if(confirm('¿Está seguro que desea resetear la contraseña del empleado?')) return resetClave(); else return false;" role="button">Resetear Contraseña</a>
                 </div>
             </div>
         </div>

@@ -16,34 +16,39 @@ public partial class Site : System.Web.UI.MasterPage
         {
             if (!IsPostBack)
             {
-                EvaluacionEntidades.Empleados emp = EvaluacionBL.EmpleadosBL.getEmpleado(correoElectronico: Context.User.Identity.Name);
-                litSesion.Text = "<span class=\"pull-right\">Bienvenido, " + emp.nombreCompleto + " - </span>";
-                if (emp.TipoEmpleado.Contains("ADMINISTRADOR"))
+                if (!string.IsNullOrEmpty(Context.User.Identity.Name))
                 {
-                    litHome.Text = "Home";
-                }
-                else
-                {
-                    if (emp.Pais.ToUpper() != "BRASIL")
+                    EvaluacionEntidades.Empleados emp = EvaluacionBL.EmpleadosBL.getEmpleado(correoElectronico: Context.User.Identity.Name);
+                    litSesion.Text = "<span class=\"pull-right\">Bienvenido, " + emp.nombreCompleto + " - </span>";
+                    if (emp.TipoEmpleado.Contains("ADMINISTRADOR"))
                     {
                         litHome.Text = "Home";
-                        litResponsabilidades.Text = "Responsabilidades";
-                        litOportunidades.Text = "Oportunidades";
-                        litDesempeño.Text = "Desempeño Global";
-                        litCompetencias.Text = "Competencias";
                     }
                     else
                     {
-                        litSesion.Text = "<span class=\"pull-right\">bem - vindo, " + emp.nombreCompleto + " - </span>";
-                        litHome.Text = "Home";
-                        litResponsabilidades.Text = "Responsabilidades";
-                        litOportunidades.Text = "Oportunidades";
-                        litDesempeño.Text = "Desempenho global";
-                        litCompetencias.Text = "Competencias Core";
+                        if (emp.Pais.ToUpper() != "BRASIL")
+                        {
+                            litHome.Text = "Home";
+                            litResponsabilidades.Text = "Responsabilidades";
+                            litOportunidades.Text = "Oportunidades";
+                            litDesempeño.Text = "Desempeño Global";
+                            litCompetencias.Text = "Competencias";
+                        }
+                        else
+                        {
+                            litSesion.Text = "<span class=\"pull-right\">bem - vindo, " + emp.nombreCompleto + " - </span>";
+                            litHome.Text = "Home";
+                            litResponsabilidades.Text = "Responsabilidades";
+                            litOportunidades.Text = "Oportunidades";
+                            litDesempeño.Text = "Desempenho global";
+                            litCompetencias.Text = "Competencias Core";
+                        }
                     }
                 }
-
-            }
+                else {
+                    lbtnLogout.Visible = true;
+                }
+              }
            
         }
         catch (Exception ex)
@@ -59,6 +64,7 @@ public partial class Site : System.Web.UI.MasterPage
             HttpContext.Current.Session.Clear();
             HttpContext.Current.Session.Abandon();
             ViewState.Clear();
+        FormsAuthentication.SignOut();
             Response.Redirect("/logon.aspx");
     }
 }

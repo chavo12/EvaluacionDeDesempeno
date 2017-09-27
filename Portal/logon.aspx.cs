@@ -36,7 +36,11 @@ public partial class logon : System.Web.UI.Page
             {
                 ingresoCorrecto = true;
                 if (emp.TipoEmpleado.Contains("ADMINISTRADOR")) Session["Admin"] = emp.IdEmpleado;
-                
+
+            }
+            else if (string.IsNullOrEmpty(emp.clave) && emp.resetClave.HasValue)
+            {
+                Response.Redirect("/reiniciarclave.aspx?e=" + emp.EmpleadoId + "&r=" + emp.resetClave.Value, false);
             }
             else ingresoCorrecto = false;
 
