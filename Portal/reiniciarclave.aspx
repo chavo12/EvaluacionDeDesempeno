@@ -3,7 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="Server">
     <div class="row">
         <div class="col-md-2"></div>
-        <div class="col-md-8">
+        <div class="col-md-4">
             <div class="panel panel-info">
                 <div class="panel-heading">
                     <label class="text-info">

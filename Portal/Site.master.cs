@@ -46,7 +46,7 @@ public partial class Site : System.Web.UI.MasterPage
                     }
                 }
                 else {
-                    lbtnLogout.Visible = true;
+                    lbtnLogout.Visible = false;
                 }
               }
            
